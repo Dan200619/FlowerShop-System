@@ -1,0 +1,197 @@
+:root {
+    --login-rose: #ad456e;
+    --login-rose-dark: #762943;
+    --login-rose-soft: #f7dce7;
+    --login-rose-pale: #fff7fa;
+    --login-cream: #fffaf9;
+    --login-ink: #35232c;
+    --login-muted: #634a53;
+    --login-border: #e7c5d1;
+}
+
+body {
+    color: var(--login-ink);
+    background: linear-gradient(180deg, #fffaf9 0%, #f8eef2 100%);
+}
+
+.login-main {
+    padding: 2rem 1rem;
+}
+
+.login-card {
+    width: min(100%, 820px);
+    min-height: 520px;
+    border: 1px solid var(--login-border);
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2.2rem rgba(66, 31, 46, 0.12) !important;
+    overflow: hidden;
+}
+
+.login-form-panel {
+    padding: clamp(1.8rem, 4vw, 3rem) !important;
+}
+
+.login-heading {
+    color: var(--login-ink);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.login-description {
+    color: var(--login-muted);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.login-form-panel .form-label {
+    color: #4d3a42;
+    font-size: 0.86rem;
+    font-weight: 600;
+}
+
+.login-form-panel .form-control {
+    min-height: 3.1rem;
+    padding: 0.7rem 0.9rem;
+    color: var(--login-ink);
+    background: #fffdfd;
+    border: 1px solid #e6d4dc;
+    border-radius: 0.6rem;
+    font-size: 0.96rem;
+    transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.login-form-panel .form-control:focus {
+    background: white;
+    border-color: var(--login-rose);
+    box-shadow: 0 0 0 0.22rem rgba(173, 69, 110, 0.12);
+}
+
+.login-password-wrap {
+    position: relative;
+}
+
+.login-password-wrap .form-control {
+    padding-right: 4.25rem;
+}
+
+.login-password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    padding: 0.25rem;
+    color: var(--login-rose-dark);
+    background: transparent;
+    border: 0;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transform: translateY(-50%);
+}
+
+.login-password-toggle:focus-visible,
+.login-forgot-link:focus-visible {
+    border-radius: 0.25rem;
+    outline: 2px solid var(--login-rose);
+    outline-offset: 3px;
+}
+
+.login-submit {
+    min-height: 3.1rem;
+    margin-top: 0.75rem;
+    color: white;
+    background: var(--login-rose);
+    border-color: var(--login-rose);
+    border-radius: 0.6rem;
+    font-weight: 600;
+    transition: background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.login-submit:hover,
+.login-submit:focus-visible {
+    color: white;
+    background: var(--login-rose-dark);
+    border-color: var(--login-rose-dark);
+    box-shadow: 0 0.5rem 1rem rgba(118, 41, 67, 0.2);
+    transform: translateY(-1px);
+}
+
+.login-forgot-link {
+    color: var(--login-rose-dark);
+}
+
+.login-welcome-panel {
+    min-height: 520px;
+    padding: clamp(1.8rem, 4vw, 3rem) !important;
+    background: linear-gradient(135deg, #f7dce7 0%, #ad456e 38%, #762943 100%) !important;
+}
+
+.login-welcome-content {
+    position: relative;
+    z-index: 1;
+    max-width: 27rem;
+}
+
+.login-welcome-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+}
+
+.login-welcome-kicker::before {
+    width: 1.5rem;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.65);
+    content: "";
+}
+
+.login-welcome-title {
+    max-width: 22rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+}
+
+.login-welcome-copy {
+    max-width: 24rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    font-size: 0.97rem;
+}
+
+.login-panel-note {
+    position: absolute;
+    z-index: 1;
+    right: clamp(1.8rem, 4vw, 3rem);
+    bottom: 2rem;
+    left: clamp(1.8rem, 4vw, 3rem);
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 0.76rem;
+}
+
+@media (max-width: 767.98px) {
+    .login-main {
+        padding: 1rem 0.75rem;
+    }
+
+    .login-card {
+        min-height: 0;
+        border-radius: 0.8rem;
+    }
+
+    .login-form-panel {
+        padding: 1.6rem 1.2rem !important;
+    }
+
+    .login-welcome-panel {
+        min-height: 300px;
+        padding: 2rem 1.2rem !important;
+    }
+
+    .login-panel-note {
+        right: 1.2rem;
+        bottom: 1.2rem;
+        left: 1.2rem;
+    }
+}
